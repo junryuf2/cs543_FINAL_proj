@@ -21,6 +21,8 @@ def get_camera_parameters():
         [0, focal_length_pixels, pp[1]],
         [0, 0, 1]
     ])
+
+    print(f'printing camera matrx shape {camera_matrix.shape}')
     R = np.eye(3)
     T = np.array([[100, 0, 0]]).T
     return camera_matrix, R, T
@@ -57,6 +59,8 @@ def main():
     json_file2 = 'revised_videos/keypoints/IMG_2358.json'
     keypoints1 = load_keypoints(json_file1)
     keypoints2 = load_keypoints(json_file2)
+
+    print(keypoints1[0].shape)
     camera_matrix, R, T = get_camera_parameters()
 
 
@@ -67,7 +71,9 @@ def main():
             points_series.append(points_3d)
 
 
+    print((points_series[0].shape))
     all_3d_points = np.dstack(points_series)  #  (N_frames, 17, 3)
+    print(f'all3dpoints is {all_3d_points.shape}')
     all_3d_points = np.transpose(all_3d_points, (2, 1, 0))  # (3, 17, N_frames)
 
 

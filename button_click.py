@@ -13,6 +13,7 @@ import IPython.display as Disp
 
 
 # bbox_select(dir_="revised_videos/frames/0679_frames/f00", frame=30)
+frame = input("Input the video you want to use (Select from 679, 687, 688, 689)")
 im = cv2.imread("revised_videos/frames/0679_frames/f0016.jpg")
 # im = cv2.imread("revised_videos/frames/2363_frames/f0016.jpg")
 

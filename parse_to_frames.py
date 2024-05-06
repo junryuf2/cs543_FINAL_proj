@@ -31,11 +31,11 @@ def get_frames(output_dir, video_file_dir):
     # Release the video capture object
     video.release()
 
-video_path1 = "IMG_0674.mp4"
-video_path2 = "IMG_2358.mp4"
-output_folder1 = "revised_videos/frames/0674_frames"
-output_folder2 = "revised_videos/frames/2358_frames"
+# video_path1 = "IMG_0674.mp4"
+video_path2 = "IMG_2372.mp4"
+# output_folder1 = "revised_videos/frames/0674_frames"
+output_folder2 = "revised_videos/frames/2372_frames"
 
 print("hello?")
-get_frames(output_folder1, video_path1)
+# get_frames(output_folder1, video_path1)
 get_frames(output_folder2, video_path2)
